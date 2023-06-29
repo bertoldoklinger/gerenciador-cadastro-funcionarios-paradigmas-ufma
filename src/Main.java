@@ -6,7 +6,7 @@ public class Main {
         GerenciadorFuncionarios gerenciador = new GerenciadorFuncionarios();
         Scanner scanner = new Scanner(System.in);
 
-        int opcao = 0;
+        String opcao ;
         do {
             System.out.println("=== Menu ===");
             System.out.println("1. Cadastrar Funcionário");
@@ -15,30 +15,28 @@ public class Main {
             System.out.println("4. Remover Funcionário");
             System.out.println("5. Sair");
             System.out.print("Escolha uma opção: ");
-            opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar o buffer do scanner
+            opcao = scanner.next();
 
             switch (opcao) {
-                case 1:
+                case "1":
                     gerenciador.cadastrar();
                     break;
-                case 2:
+                case "2":
                     gerenciador.listar();
                     break;
-                case 3:
+                case "3":
                     gerenciador.atualizar();
                     break;
-                case 4:
+                case "4":
                     gerenciador.remover();
                     break;
-                case 5:
+                case "5":
                     System.out.println("Saindo do programa...");
                     break;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
-
             System.out.println();
-        } while (opcao != 5);
+        }while (!opcao.equals("5"));
     }
 }
