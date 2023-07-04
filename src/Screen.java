@@ -38,10 +38,6 @@ public class Screen extends JFrame {
         ListarPage listarPage = new ListarPage(funcionarios);
         listarPage.setVisible(true);
     }
-
-    private void actionRemover() {
-    }
-
     private void actionSair() {
         System.exit(0);
     }
